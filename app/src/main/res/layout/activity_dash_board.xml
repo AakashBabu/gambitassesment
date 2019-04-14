@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/motionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutDescription="@xml/motion_scene">
+
+    <ImageView android:layout_width="match_parent"
+               android:layout_height="164dp"
+               android:id="@+id/bg_"
+               android:adjustViewBounds="true"
+               android:scaleType="fitXY"
+               android:src="@drawable/bg_header"/>
+
+
+    <ImageView
+            android:id="@+id/toolbarImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:padding="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/toolbarTitle"
+            app:srcCompat="@drawable/ic_profile"
+            android:background="@drawable/bg_border_circle"/>
+
+    <TextView
+            android:id="@+id/toolbarTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="The NBA Scout"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:textColor="@color/txt_white"
+            android:textSize="@dimen/txt_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/toolbarDivider"/>
+
+    <View
+            android:id="@+id/toolbarDivider"
+            android:layout_width="0dp"
+            android:layout_height="0.5dp"
+            android:background="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bg_"/>
+
+    <androidx.core.widget.NestedScrollView
+            android:id="@+id/nested_scroller"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbarDivider">
+
+        <FrameLayout android:layout_width="match_parent"
+                     android:layout_height="match_parent">
+            <include layout="@layout/content_dash_board"/>
+        </FrameLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

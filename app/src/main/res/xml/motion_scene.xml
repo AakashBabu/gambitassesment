@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        app:constraintSetEnd="@layout/activity_dash_board_after"
+        app:constraintSetStart="@layout/activity_dash_board"
+        app:duration="500">
+
+        <OnSwipe
+            app:dragDirection="dragUp"
+            app:touchAnchorId="@id/nested_scroller"
+            app:touchAnchorSide="top" />
+
+        <KeyFrameSet>
+
+            <!--<KeyAttribute-->
+                <!--android:alpha="0"-->
+                <!--motion:framePosition="40"-->
+                <!--motion:target="@id/toolbarDesc" />-->
+
+        </KeyFrameSet>
+
+    </Transition>
+
+</MotionScene>

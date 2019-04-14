@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <ImageView android:layout_width="20dp" android:layout_height="20dp"
+               android:src="@drawable/ic_up_arrow"
+               android:layout_centerHorizontal="true"
+               android:adjustViewBounds="true"
+               android:scaleType="fitXY"/>
+
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:background="@drawable/edge_curve_purple"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="14dp"
+                    android:padding="12dp">
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:text="1. Click here to find Players"
+                  android:textColor="@color/txt_white"
+                  android:id="@+id/txt_titile"
+                  android:layout_toLeftOf="@+id/txt_next"
+                  android:textStyle="bold"/>
+
+        <TextView
+                android:layout_toLeftOf="@+id/txt_next"
+                android:layout_below="@+id/txt_titile" android:layout_width="match_parent"
+                android:id="@+id/txt_des"
+                android:layout_height="wrap_content"
+                android:text="You can search players by Name, Position, Teams or Division. Start typing to search now"
+                android:textColor="@color/txt_white"/>
+
+
+        <TextView android:layout_width="64dp" android:layout_height="24dp"
+                  android:gravity="center"
+                  android:text="Next"
+                  android:id="@+id/txt_next"
+                  android:layout_centerVertical="true"
+                  android:layout_alignParentRight="true"
+                  android:textSize="12dp"
+                  android:layout_marginLeft="12dp"
+                  android:textColor="@color/colorPrimaryDark"
+                  android:background="@drawable/edge_curve_white"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

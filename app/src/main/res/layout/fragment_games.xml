@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:padding="6dp"
+              android:orientation="vertical"
+             android:background="@color/bg_shade"
+             tools:context=".views.fragment.GamesFragment">
+
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="6dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:background="@drawable/edge_curve_shade"
+                    android:padding="12dp">
+        <EditText
+                android:background="@android:color/transparent"
+                android:cursorVisible="false"
+                style="@style/txt_shade_m12"
+                android:id="@+id/etd_search"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:imeOptions="actionSearch"
+                android:hint="Type to Search..."/>
+        <ImageView android:layout_width="10dp"
+                   android:layout_height="10dp"
+                   android:layout_centerVertical="true"
+                   android:layout_alignParentRight="true"
+                   android:src="@drawable/ic_search"/>
+    </RelativeLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView android:layout_width="match_parent"
+                                               android:layout_height="match_parent"
+    android:id="@+id/rv_gamer_list"/>
+</LinearLayout>

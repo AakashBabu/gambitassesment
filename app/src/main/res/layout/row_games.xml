@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:background="@color/bg_shade"
+              android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="15dp"
+            android:padding="12dp"
+            android:layout_margin="6dp"
+            app:cardPreventCornerOverlap="false">
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp">
+
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:id="@+id/ll_img_1">
+
+
+                <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:id="@+id/img_team1"
+                        android:layout_alignBottom="@+id/txt_name_first"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/ic_gsw"/>
+                <TextView
+                        android:layout_toRightOf="@+id/img_team1"
+                        android:id="@+id/txt_home_abb"
+                        android:text="Name"
+                        style="@style/txt_black_w20"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                              android:orientation="horizontal"
+                              android:gravity="center"
+                              android:layout_alignParentRight="true"
+                              android:id="@+id/ll_img_2">
+
+                <TextView
+                        style="@style/txt_black_w20"
+                        android:id="@+id/txt_guest_abb"
+                        android:layout_toLeftOf="@+id/img_team2"
+                        android:text="Name"/>
+                    <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:id="@+id/img_team2"
+                            android:layout_alignBottom="@+id/txt_team_name"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/ic_lal"/>
+
+                </LinearLayout>
+                <TextView
+                        style="@style/txt_shade_w10"
+                        android:layout_alignParentRight="true"
+                        android:id="@+id/txt_guest_team"
+                        android:layout_below="@+id/ll_img_2"
+                        android:text="Name"/>
+                <TextView
+                        android:text="Name"
+                        android:layout_below="@+id/ll_img_1"
+                        android:id="@+id/txt_home_team"
+                        style="@style/txt_shade_w10"/>
+                <TextView
+                        android:text="VS"
+                        android:layout_centerInParent="true"
+                        style="@style/txt_shade_w12_d"/>
+
+
+            </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
