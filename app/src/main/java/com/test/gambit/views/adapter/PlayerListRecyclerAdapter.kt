@@ -42,7 +42,7 @@ class PlayerListRecyclerAdapter(
             data.clear()
         data.addAll(data_set.data)
         next_page = data_set.meta.next_page
-        page_ended = data_set.meta.total_pages == data_set.meta.current_page
+        page_ended = (data_set.meta.total_pages == data_set.meta.current_page) || (data_set.meta.total_pages == 0)
         StorageManager(context).storePlayers(PlayerModel(data,data_set.meta))
         notifyDataSetChanged()
     }

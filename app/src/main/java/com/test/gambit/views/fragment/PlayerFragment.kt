@@ -70,8 +70,14 @@ class PlayerFragment : Fragment() {
                 override fun handleSuccess(obj: Any) {
                     val model = obj as PlayerModel
                     Log.v("responce", "getPlayerList"+i)
-                    if(i==0 || i == -1)
+                    if(i==0 || i == -1) {
                         rv_player_list.smoothScrollToPosition(0)
+                        if(model.data.size == 0)
+                            no_itemss_found.visibility = View.VISIBLE
+                        else
+                            no_itemss_found.visibility = View.GONE
+
+                    }
                     adapter.addPlayers(model, i == -1)
                 }
 
